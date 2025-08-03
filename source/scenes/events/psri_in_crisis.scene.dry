@@ -1,7 +1,7 @@
 title: PSRI in Crisis!
 subtitle: The PSRI is having a crisis of leadership...
 new-page: true
-view-if: psri_stable and psri_r < 3 and psri_votes < 4 and year < 1924 and not national_congress_seen
+view-if: psri_stable and psri_r < 3 and psri_votes < 4 and year < 1924 and not national_congress_seen and not left_wing_coalition
 on-arrival: psri_stable = 0
 tags: event
 max-visits: 1
@@ -17,7 +17,7 @@ There is significant efforts within the party, including Bonomi, who are pushing
 
 @psri_left
 choose-if: (psu_formed and (psi_votes >= 37 or radicalisation >= 8)) or ((pri_prominent or pll_formed) and bissolati_dead != 1)
-unavailable-subtitle: Proponents of the shift argue that the PSRI will become increasingly isolated without a shift in ideology.
+unavailable-subtitle: Without a suitable left-wing partner, advocates argue a change in course is necessary.
 on-arrival: {!
 
 let options = [];
@@ -59,6 +59,7 @@ The opposition is able to succeed, continuing the party's ideological commitment
 view-if: (not psu_formed or (psi_votes < 37 and radicalisation < 8 or (not not_participating or not maximalist_participating) or radicalisation < 7)) and ((not pri_prominent and not pll_formed) or bissolati_dead = 1)
 on-arrival: {!
 Q.psri_solo = 1;
+Q.psri_time = Q.time + 7;
 
 
 if (Q.psu_formed) {
