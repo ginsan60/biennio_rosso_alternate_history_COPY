@@ -333,6 +333,7 @@ We also have the opportunity to mold social legislation to our whims. Various de
 - @violent_abortion: Liberalise abortion laws.
 - @violent_suffrage: Pass women's suffrage.
 - @violent_labour: Raise the minimum working age to 16, outlawing child labour.
+- @violent_menu: We have done all that is necessary.
 
 @violent_abortion
 view-if: not abortion_rights 
